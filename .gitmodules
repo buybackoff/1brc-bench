@@ -1,0 +1,21 @@
+[submodule "src/buybackoff"]
+	path = src/buybackoff
+	url = https://github.com/buybackoff/1brc
+[submodule "src/noahfalk"]
+	path = src/noahfalk
+	url = https://github.com/noahfalk/1brc/
+[submodule "src/nietras"]
+	path = src/nietras
+	url = https://github.com/nietras/1brc.cs
+[submodule "src/xoofx"]
+	path = src/xoofx
+	url = https://github.com/xoofx/Fast1BRC/
+[submodule "src/lehuyduc"]
+	path = src/lehuyduc
+	url = https://github.com/lehuyduc/1brc-simd
+[submodule "src/austindonisan"]
+	path = src/austindonisan
+	url = https://github.com/austindonisan/1brc/
+[submodule "src/java"]
+	path = src/java
+	url = https://github.com/gunnarmorling/1brc/
