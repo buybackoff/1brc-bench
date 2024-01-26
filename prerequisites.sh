@@ -19,6 +19,7 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk version
 yes | sdk install java 21.0.2-open
 yes | sdk install java 21.0.2-graal
+sudo apt install -y maven
 
 # .NET
 wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
