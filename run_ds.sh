@@ -24,24 +24,24 @@ user_list=("buybackoff" "nietras" "noahfalk" "xoofx" "abeobk" "artsiomkorzun" "a
 
 for username in "${user_list[@]}"; do
 
-  counter=4
-  last_counter=$counter
-  while [ "$counter" -le "$max_cores" ]; do
-      # Non hyper-threaded
-      source run.sh $username $counter $counter $dataset $runs
-      # Hyper-threaded
-      source run.sh $username $counter $((counter * 2)) $dataset $runs
+    counter=4
+    last_counter=$counter
+    while [ "$counter" -le "$max_cores" ]; do
+        # Non hyper-threaded
+        source run.sh $username $counter $counter $dataset $runs
+        # Hyper-threaded
+        source run.sh $username $counter $((counter * 2)) $dataset $runs
 
-      last_counter=$counter
-      counter=$((counter * 2))
-  done
+        last_counter=$counter
+        counter=$((counter * 2))
+    done
 
-  if [ "$last_counter" -lt "$max_cores" ]; then
-      counter=$max_cores
-      # Non hyper-threaded
-      source run.sh $username $counter $counter $dataset $runs
-      # Hyper-threaded
-      source run.sh $username $counter $((counter * 2)) $dataset $runs
-  fi
+    if [ "$last_counter" -lt "$max_cores" ]; then
+        counter=$max_cores
+        # Non hyper-threaded
+        source run.sh $username $counter $counter $dataset $runs
+        # Hyper-threaded
+        source run.sh $username $counter $((counter * 2)) $dataset $runs
+    fi
 
 done
