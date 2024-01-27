@@ -9,3 +9,5 @@ git submodule update --recursive --remote
 for script in *.sh; do
     chmod +x "$script"
 done
+
+source build.sh
