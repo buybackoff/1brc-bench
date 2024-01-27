@@ -20,7 +20,7 @@ else
     runs=5
 fi
 
-user_list=("buybackoff" "nietras" "noahfalk" "xoofx" "abeobk" "artsiomkorzun" "austindonisan" "dzaima" "lehuyduc")
+user_list=("buybackoff" "nietras" "noahfalk" "xoofx" "abeobk" "artsiomkorzun" "dzaima" "lehuyduc")
 
 for username in "${user_list[@]}"; do
 
