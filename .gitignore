@@ -1,3 +1,4 @@
 bin/
-/inputs/*.txt
-/inputs/*.zst
+inputs/*.txt
+inputs/*.zst
+results/
