@@ -73,6 +73,9 @@ if [ "$username" == "lehuyduc" ]; then
     rm -f result.txt
 elif [ "$username" == "austindonisan" ]; then
     numactl --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./bin/austindonisan/aot/1brc $input_file $num_threads 1"
+elif [ "$username" == "dzaima" ]; then
+    THREADS_1BRC=$num_threads \
+    numactl --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./bin/dzaima/aot/1brc $input_file"
 else
     aot="./bin/$username/aot/1brc"
     # jit="./bin/$username/jit/1brc"

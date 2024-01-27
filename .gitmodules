@@ -19,3 +19,6 @@
 [submodule "src/java"]
 	path = src/java
 	url = https://github.com/gunnarmorling/1brc/
+[submodule "src/dzaima"]
+	path = src/dzaima
+	url = https://github.com/dzaima/1brc
