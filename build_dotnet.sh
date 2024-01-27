@@ -7,6 +7,9 @@ dotnet publish -r linux-x64 -f net8.0 -p:PublishAot=true  ./src/buybackoff/1brc/
 
 # nietras
 rm -rf bin/nietras 
+prio_file_path="./src/nietras/src/Brc/Program.cs"
+substring="ProcessPriorityClass"
+sed -i "/$substring/ s/^/\/\/ /" "$prio_file_path"
 mv ./src/nietras/src/Brc/Brc.csproj ./src/nietras/src/Brc/1brc.csproj
 dotnet build -c Release ./src/nietras/src/Brc/1brc.csproj -o bin/nietras/jit
 dotnet publish -r linux-x64 -f net8.0 -p:PublishAot=true ./src/nietras/src/Brc/1brc.csproj -o bin/nietras/aot
