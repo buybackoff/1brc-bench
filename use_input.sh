@@ -30,8 +30,8 @@ else
     fi
 fi
 
-rm $java_symlink
-rm $inputs_symlink
+rm -f $java_symlink
+rm -f $inputs_symlink
 
 ln -s $destination $java_symlink
 ln -s $destination $inputs_symlink
