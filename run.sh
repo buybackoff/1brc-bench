@@ -47,7 +47,7 @@ dir="results/${dataset}"
 mkdir -p $dir
 
 filetimestamp=$(date  +"%Y%m%d%H%M%S") 
-jsonfilename="./${dir}/${username}_${num_cores}_${num_threads}_${filetimestamp}.json"
+jsonfilename="./${dir}/${username}_${num_cores}_${num_threads}_${runs}_${filetimestamp}.json"
 jsonfilename=$(realpath "$jsonfilename")
 
 if [ "$num_cores" -eq "$num_threads" ]; then
