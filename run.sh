@@ -122,7 +122,7 @@ else
     aot="./bin/$username/aot/1brc"
     # jit="./bin/$username/jit/1brc"
     java="./src/java/calculate_average_${username}.sh"
-    echo $java
+    
     if [ -f "$aot" ]; then
         numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "$aot $input_file"
     elif [ -f "$java" ]; then
