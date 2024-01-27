@@ -43,9 +43,15 @@ if [ -n "$5" ]; then
     runs="$5"
 fi
 
-dir="results/${dataset}"
-mkdir -p $dir
 
+if [ -n "$MACHINE_ID" ]; then
+    machine_id="${MACHINE_ID}/"
+else
+    machine_id=""
+fi
+
+dir="results/${machine_id}${dataset}"
+mkdir -p $dir
 filetimestamp=$(date  +"%Y%m%d%H%M%S") 
 jsonfilename="./${dir}/${username}_${num_cores}_${num_threads}_${runs}_${filetimestamp}.json"
 jsonfilename=$(realpath "$jsonfilename")

@@ -1,4 +1,4 @@
 bin/
 inputs/*.txt
 inputs/*.zst
-results/
+
