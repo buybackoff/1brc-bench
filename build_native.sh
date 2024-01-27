@@ -15,7 +15,7 @@ if [ -n "$2" ]; then
     num_threads="$2"
 else
     # Use nproc to get the number of CPU threads
-    num_threads=$num_cores
+    num_threads=$(nproc --all)
 fi
 
 
