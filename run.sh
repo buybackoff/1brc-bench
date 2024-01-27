@@ -47,7 +47,7 @@ fi
 if [ -n "$MACHINE_ID" ]; then
     machine_id="${MACHINE_ID}/"
 else
-    machine_id=""
+    machine_id="manual/"
 fi
 
 dir="results/${machine_id}${dataset}"
