@@ -23,6 +23,7 @@ fi
 user_list=("buybackoff" "nietras" "noahfalk" "xoofx" "abeobk" "artsiomkorzun" "austindonisan" "lehuyduc") # TODO dzaima #17
 
 counter=2
+last_counter=2
 while [ "$counter" -le "$max_cores" ]; do
    
     for username in "${user_list[@]}"; do
@@ -32,14 +33,16 @@ while [ "$counter" -le "$max_cores" ]; do
         source run.sh $username $counter $((counter * 2)) $dataset $runs
     done
 
-    # Double the counter
+    last_counter=$counter
     counter=$((counter * 2))
 done
 
-if [ "$counter" -gt "$max_cores" ]; then
+if [ "$last_counter" -lt "$max_cores" ]; then
     counter=$max_cores
-    # Non hyper-threaded
-    source run.sh $username $counter $counter $dataset $runs
-    # Hyper-threaded
-    source run.sh $username $counter $((counter * 2)) $dataset $runs
+    for username in "${user_list[@]}"; do
+        # Non hyper-threaded
+        source run.sh $username $counter $counter $dataset $runs
+        # Hyper-threaded
+        source run.sh $username $counter $((counter * 2)) $dataset $runs
+    done
 fi
