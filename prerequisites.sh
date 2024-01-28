@@ -13,6 +13,7 @@ sudo apt install -y zlib1g-dev
 sudo apt install -y zstd
 sudo apt install -y hyperfine
 sudo apt install -y numactl
+sudo apt install -y hwloc
 sudo apt install -y build-essential
 
 # Java

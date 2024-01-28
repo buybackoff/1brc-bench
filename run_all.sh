@@ -31,14 +31,14 @@ source run_ds.sh "1B" $max_cores $runs
 source run_ds.sh "1B_10K" $max_cores $runs
 
 
-# Get current date and time formatted as YYMMDDHHmmss
-timestamp=$(date "+%y%m%d%H%M%S")
+# # Get current date and time formatted as YYMMDDHHmmss
+# timestamp=$(date "+%y%m%d%H%M%S")
 
-# Create a new branch named results with the timestamp
-git checkout -b results_$timestamp
+# # Create a new branch named results with the timestamp
+# git checkout -b results_$timestamp
 
-git add .
-git commit -m "Results at $timestamp"
+# git add .
+# git commit -m "Results at $timestamp"
 
-# Switch back to the main branch
-git checkout main
+# # Switch back to the main branch
+# git checkout main
