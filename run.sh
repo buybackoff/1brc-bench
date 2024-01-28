@@ -119,7 +119,7 @@ fi
 #     fi
 # fi
 
-echo "Using CPUs: $cpus"
+echo "Using CPUs (${num_cores}C ${num_threads}T): $cpus"
 
 if [ "$username" == "lehuyduc" ]; then
     rm -f ./bin/lehuyduc/aot/1brc

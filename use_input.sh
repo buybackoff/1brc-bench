@@ -14,7 +14,8 @@ java_symlink="./src/java/measurements.txt"
 inputs_symlink="./inputs/measurements.txt"
 
 if [ -f "$destination" ]; then
-    echo "File already exists in destination: $destination"
+    :
+    # echo "File already exists in destination: $destination"
 else
     # Check if the local file exists
     if [ -e "$local_file" ]; then
