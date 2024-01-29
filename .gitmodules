@@ -22,3 +22,12 @@
 [submodule "src/dzaima"]
 	path = src/dzaima
 	url = https://github.com/dzaima/1brc
+[submodule "src/kpocza"]
+	path = src/kpocza
+	url = https://github.com/kpocza/1brc
+[submodule "src/RagnarGrootKoerkamp"]
+	path = src/RagnarGrootKoerkamp
+	url = https://github.com/RagnarGrootKoerkamp/1brc/
+[submodule "src/mtopolnik"]
+	path = src/mtopolnik
+	url = https://github.com/mtopolnik/rust-1brc/

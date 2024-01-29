@@ -30,3 +30,13 @@ sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
 sudo apt update
 sudo apt install -y dotnet-sdk-8.0
+
+# Rust
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source $HOME/.cargo/env
+rustup toolchain install nightly
+rustup default nightly
+
+rustc --version
+cargo --version

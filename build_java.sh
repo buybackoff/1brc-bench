@@ -9,5 +9,7 @@ sdk use java 21.0.2-open 1>&2
 (cd src/java && ./prepare_abeobk.sh)
 (cd src/java && ./prepare_artsiomkorzun.sh)
 (cd src/java && ./prepare_jerrinot.sh)
+(cd src/java && ./prepare_mtopolnik.sh)
 (cd src/java && ./prepare_royvanrijn.sh)
 (cd src/java && ./prepare_thomaswue.sh)
+
