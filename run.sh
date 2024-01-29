@@ -78,27 +78,26 @@ if [ "$username" == "lehuyduc" ]; then
     # TODO On HT cores set to threads count is significantly better.
     g++ -o ./bin/lehuyduc/aot/1brc ./src/lehuyduc/main.cpp -O3 -std=c++17 -march=native -m64 -lpthread -DN_THREADS_PARAM=$num_threads -DN_CORES_PARAM=$num_threads -g
     echo "Built lehuyduc's repo with $num_threads threads"
-    numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./bin/lehuyduc/aot/1brc $input_file"
+    sudo numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./bin/lehuyduc/aot/1brc $input_file"
     rm -f result.txt
 elif [ "$username" == "austindonisan" ]; then
-    numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./bin/austindonisan/aot/1brc $input_file $num_threads 1"
+    sudo numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./bin/austindonisan/aot/1brc $input_file $num_threads 1"
 elif [ "$username" == "dzaima" ]; then
     THREADS_1BRC=$num_threads \
-    numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./bin/dzaima/aot/1brc $input_file"
+    sudo numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./bin/dzaima/aot/1brc $input_file"
 elif [ "$username" == "dzaima" ]; then
     THREADS_1BRC=$num_threads \
-    numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./bin/dzaima/aot/1brc $input_file"
+    sudo numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./bin/dzaima/aot/1brc $input_file"
 else
     aot="./bin/$username/aot/1brc"
     # jit="./bin/$username/jit/1brc"
     java="./src/java/calculate_average_${username}.sh"
-    java_prepare="./src/java/prepare_${username}.sh"
     
     if [ -f "$aot" ]; then
-        numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "$aot $input_file"
+        sudo numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "$aot $input_file"
     elif [ -f "$java" ]; then
-        (cd src/java && "${java_prepare}")
-        (cd src/java && numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "${java}")
+        (cd src/java && "./prepare_${username}.sh")
+        (cd src/java && sudo numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./calculate_average_${username}.sh")
     else
         echo "No suitable file found for $username. Exiting."
         exit 1
