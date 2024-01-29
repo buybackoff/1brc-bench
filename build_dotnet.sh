@@ -25,7 +25,6 @@ mv ./src/xoofx/Fast1BRC.csproj ./src/xoofx/1brc.csproj
 dotnet build -c Release ./src/xoofx/1brc.csproj -o bin/xoofx/jit
 dotnet publish -r linux-x64 -f net8.0 -p:PublishAot=true ./src/xoofx/1brc.csproj -o bin/xoofx/aot
 
-
 # kpocza
 rm -rf bin/kpocza 
 dotnet build -c Release ./src/kpocza/1brc/1brc.csproj -o bin/kpocza/jit

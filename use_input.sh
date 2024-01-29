@@ -10,8 +10,10 @@ fi
 destination="/dev/shm/measurements$suffix.txt"
 local_file="inputs/measurements$suffix.txt"
 compressed_file="inputs/measurements$suffix.txt.zst"
+
 java_symlink="./src/java/measurements.txt"
 inputs_symlink="./inputs/measurements.txt"
+root_symlink="./measurements.txt"
 
 if [ -f "$destination" ]; then
     :
@@ -33,6 +35,8 @@ fi
 
 rm -f $java_symlink
 rm -f $inputs_symlink
+rm -f $root_symlink
 
 ln -s $destination $java_symlink
 ln -s $destination $inputs_symlink
+ln -s $destination $root_symlink
