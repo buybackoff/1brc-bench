@@ -73,11 +73,11 @@ echo "Using CPUs (${num_cores}C ${num_threads}T): $cpus"
 
 if [ "$username" == "lehuyduc" ]; then
     rm -f ./bin/lehuyduc/aot/1brc
-    # g++ -o ./bin/lehuyduc/aot/1brc ./src/lehuyduc/main.cpp -O3 -std=c++17 -march=native -m64 -lpthread -DN_THREADS_PARAM=$num_threads -DN_CORES_PARAM=$num_cores -g
-    # echo "Built lehuyduc's repo with $num_cores cores and $num_threads threads"
+    g++ -o ./bin/lehuyduc/aot/1brc ./src/lehuyduc/main.cpp -O3 -std=c++17 -march=native -m64 -lpthread -DN_THREADS_PARAM=$num_threads -DN_CORES_PARAM=$num_cores -g
+    echo "Built lehuyduc's repo with $num_cores cores and $num_threads threads"
     # TODO On HT cores set to threads count is significantly better.
-    g++ -o ./bin/lehuyduc/aot/1brc ./src/lehuyduc/main.cpp -O3 -std=c++17 -march=native -m64 -lpthread -DN_THREADS_PARAM=$num_threads -DN_CORES_PARAM=$num_threads -g
-    echo "Built lehuyduc's repo with $num_threads threads"
+    # g++ -o ./bin/lehuyduc/aot/1brc ./src/lehuyduc/main.cpp -O3 -std=c++17 -march=native -m64 -lpthread -DN_THREADS_PARAM=$num_threads -DN_CORES_PARAM=$num_threads -g
+    # echo "Built lehuyduc's repo with $num_threads threads"
     sudo numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./bin/lehuyduc/aot/1brc $input_file"
     rm -f result.txt
 elif [ "$username" == "austindonisan" ]; then
