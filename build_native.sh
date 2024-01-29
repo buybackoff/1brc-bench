@@ -27,11 +27,10 @@ echo "Built lehuyduc's repo with $num_cores cores and $num_threads threads"
 
 # austindonisan
 # Note that it uses clang-17, and the default gcc is indeed significantly slower (740ms vs 830 ms), but it does not change the big picture. For 10K the difference is invisible.
-# TODO Cannot build last commit
-# rm -rf bin/austindonisan
-# mkdir -p bin/austindonisan/aot
-# gcc -o ./bin/austindonisan/aot/1brc ./src/austindonisan/1brc.c -Wall -Werror -Wno-unused-parameter -std=c17 -march=native -mtune=native -Ofast
-# echo "Built austindonisan's repo"
+rm -rf bin/austindonisan
+mkdir -p bin/austindonisan/aot
+clang -o ./bin/austindonisan/aot/1brc ./src/austindonisan/1brc.c -Wall -Werror -Wno-unused-parameter -std=c17 -march=native -mtune=native -Ofast 
+echo "Built austindonisan's repo"
 
 # dzaima
 rm -rf bin/dzaima

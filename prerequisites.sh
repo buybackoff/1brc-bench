@@ -15,6 +15,7 @@ sudo apt install -y hyperfine
 sudo apt install -y numactl
 sudo apt install -y hwloc
 sudo apt install -y build-essential
+sudo apt install -y clang
 
 # Java
 curl -s "https://get.sdkman.io" | bash
