@@ -24,7 +24,7 @@ user_list=("buybackoff" "nietras" "noahfalk" "xoofx" "abeobk" "artsiomkorzun" "j
 
 for username in "${user_list[@]}"; do
 
-    counter=4
+    counter=6
     last_counter=$counter
     while [ "$counter" -le "$max_cores" ]; do
         # Non hyper-threaded
