@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Params: $0 <dataset> <max_cores=4> <runs=5>
+# Params: $0 <dataset> <max_cores=4> <runs=5> <min_cores=4>
 
 if [ -z "$1" ]; then
     dataset="1B"
@@ -20,11 +20,17 @@ else
     runs=5
 fi
 
+if [ -n "$4" ]; then
+    min_cores="$4"
+else
+    min_cores=4
+fi
+
 user_list=("buybackoff" "noahfalk" "nietras" "xoofx" "kpocza" "austindonisan" "dzaima" "lehuyduc" "mtopolnik-rs" "abeobk" "artsiomkorzun" "jerrinot" "mtopolnik" "thomaswue" "royvanrijn")
 
 for username in "${user_list[@]}"; do
 
-    counter=6
+    counter=$min_cores
     last_counter=$counter
     while [ "$counter" -le "$max_cores" ]; do
         # Non hyper-threaded
