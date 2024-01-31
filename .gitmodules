@@ -34,3 +34,6 @@
 [submodule "src/charlielye"]
 	path = src/charlielye
 	url = https://github.com/charlielye/1brc
+[submodule "src/pedrosakuma"]
+	path = src/pedrosakuma
+	url = https://github.com/pedrosakuma/1brc
