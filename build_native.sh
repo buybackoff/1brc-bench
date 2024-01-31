@@ -47,6 +47,11 @@ cargo build --release --manifest-path src/mtopolnik/Cargo.toml
 mkdir -p bin/mtopolnik-rs/aot
 cp src/mtopolnik/target/release/rust-1brc bin/mtopolnik-rs/aot/1brc
 
+# charlielye
+rm -rf bin/charlielye
+mkdir -p bin/charlielye/aot
+clang -o ./bin/charlielye/aot/1brc -O3 -std=c++20 -march=native -pthread main.cpp
+echo "Built charlielye's repo"
 
 # RagnarGrootKoerkamp
 # TODO Cannot build last commit

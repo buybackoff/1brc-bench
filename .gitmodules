@@ -31,3 +31,6 @@
 [submodule "src/mtopolnik"]
 	path = src/mtopolnik
 	url = https://github.com/mtopolnik/rust-1brc/
+[submodule "src/charlielye"]
+	path = src/charlielye
+	url = https://github.com/charlielye/1brc
