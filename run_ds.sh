@@ -26,7 +26,11 @@ else
     min_cores=4
 fi
 
-user_list=("buybackoff" "noahfalk" "nietras" "xoofx" "kpocza" "austindonisan" "dzaima" "lehuyduc" "mtopolnik-rs" "abeobk" "artsiomkorzun" "jerrinot" "mtopolnik" "thomaswue" "royvanrijn")
+if [[ $dataset != *"10K" ]]; then
+    user_list=("buybackoff" "noahfalk" "nietras" "xoofx" "kpocza" "austindonisan" "dzaima" "lehuyduc" "mtopolnik-rs" "abeobk" "artsiomkorzun" "jerrinot" "mtopolnik" "thomaswue" "royvanrijn")
+else
+    user_list=("buybackoff" "noahfalk" "nietras" "xoofx" "kpocza" "dzaima" "lehuyduc" "mtopolnik-rs" "abeobk" "artsiomkorzun" "jerrinot" "mtopolnik" "thomaswue" "royvanrijn")
+fi
 
 for username in "${user_list[@]}"; do
 
