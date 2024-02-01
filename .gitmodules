@@ -37,3 +37,6 @@
 [submodule "src/pedrosakuma"]
 	path = src/pedrosakuma
 	url = https://github.com/pedrosakuma/1brc
+[submodule "src/NimaAra"]
+	path = src/NimaAra
+	url = https://github.com/NimaAra/1brc
