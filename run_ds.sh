@@ -29,7 +29,7 @@ fi
 if [[ $dataset != *"10K" ]]; then
     user_list=("buybackoff" "noahfalk" "nietras" "xoofx" "kpocza" "austindonisan" "dzaima" "lehuyduc" "mtopolnik-rs" "abeobk" "artsiomkorzun" "jerrinot" "mtopolnik" "thomaswue" "royvanrijn" "pedrosakuma")
 else
-    user_list=("buybackoff" "noahfalk" "nietras" "xoofx" "kpocza" "dzaima" "lehuyduc" "mtopolnik-rs" "abeobk" "artsiomkorzun" "jerrinot" "mtopolnik" "thomaswue" "royvanrijn" "pedrosakuma")
+    user_list=("buybackoff" "noahfalk" "nietras" "xoofx" "kpocza" "austindonisan" "dzaima" "lehuyduc" "mtopolnik-rs" "abeobk" "artsiomkorzun" "jerrinot" "mtopolnik" "thomaswue" "royvanrijn")
 fi
 
 for username in "${user_list[@]}"; do
