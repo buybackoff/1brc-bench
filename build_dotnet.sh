@@ -29,3 +29,8 @@ dotnet publish -r linux-x64 -f net8.0 -p:PublishAot=true ./src/xoofx/1brc.csproj
 rm -rf bin/kpocza 
 dotnet build -c Release ./src/kpocza/1brc/1brc.csproj -o bin/kpocza/jit
 dotnet publish -r linux-x64 -f net8.0 -p:PublishAot=true  ./src/kpocza/1brc/1brc.csproj -o bin/kpocza/aot
+
+# pedrosakuma
+rm -rf bin/pedrosakuma 
+dotnet build -c Release ./src/pedrosakuma/1brc/1brc.csproj -o bin/pedrosakuma/jit
+dotnet publish -r linux-x64 -f net8.0 -p:PublishAot=true  ./src/pedrosakuma/1brc/1brc.csproj -o bin/pedrosakuma/aot
