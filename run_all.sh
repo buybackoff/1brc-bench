@@ -47,6 +47,10 @@ mkdir -p "$(dirname "$file")"
 
     echo -e "=== numactl --hardware ==="
     numactl --hardware
+    echo -e "\n\n"
+    
+    echo "=== Git Commit Information ==="
+    git log -1 
 } > "$file"
 
 # Deafult dataset
