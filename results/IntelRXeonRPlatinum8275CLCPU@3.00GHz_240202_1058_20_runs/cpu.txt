@@ -1,0 +1,334 @@
+=== lscpu ===
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Address sizes:                      46 bits physical, 48 bits virtual
+Byte Order:                         Little Endian
+CPU(s):                             96
+On-line CPU(s) list:                0-95
+Vendor ID:                          GenuineIntel
+Model name:                         Intel(R) Xeon(R) Platinum 8275CL CPU @ 3.00GHz
+CPU family:                         6
+Model:                              85
+Thread(s) per core:                 2
+Core(s) per socket:                 24
+Socket(s):                          2
+Stepping:                           7
+CPU max MHz:                        3900.0000
+CPU min MHz:                        1200.0000
+BogoMIPS:                           6000.00
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req pku ospke avx512_vnni md_clear flush_l1d arch_capabilities
+Virtualization:                     VT-x
+L1d cache:                          1.5 MiB (48 instances)
+L1i cache:                          1.5 MiB (48 instances)
+L2 cache:                           48 MiB (48 instances)
+L3 cache:                           71.5 MiB (2 instances)
+NUMA node(s):                       2
+NUMA node0 CPU(s):                  0-23,48-71
+NUMA node1 CPU(s):                  24-47,72-95
+Vulnerability Gather data sampling: Mitigation; Microcode
+Vulnerability Itlb multihit:        KVM: Mitigation: VMX disabled
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Retbleed:             Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; Enhanced IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS SW sequence
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Mitigation; TSX disabled
+
+
+
+=== lscpu -e ===
+CPU NODE SOCKET CORE L1d:L1i:L2:L3 ONLINE    MAXMHZ    MINMHZ      MHZ
+  0    0      0    0 0:0:0:0          yes 3900.0000 1200.0000 3072.222
+  1    0      0    1 1:1:1:0          yes 3900.0000 1200.0000 3058.917
+  2    0      0    2 2:2:2:0          yes 3900.0000 1200.0000 3072.274
+  3    0      0    3 3:3:3:0          yes 3900.0000 1200.0000 3812.740
+  4    0      0    4 4:4:4:0          yes 3900.0000 1200.0000 3000.000
+  5    0      0    5 5:5:5:0          yes 3900.0000 1200.0000 3000.000
+  6    0      0    6 6:6:6:0          yes 3900.0000 1200.0000 3000.000
+  7    0      0    7 8:8:8:0          yes 3900.0000 1200.0000 3000.000
+  8    0      0    8 9:9:9:0          yes 3900.0000 1200.0000 3000.000
+  9    0      0    9 10:10:10:0       yes 3900.0000 1200.0000 3000.000
+ 10    0      0   10 11:11:11:0       yes 3900.0000 1200.0000 3000.000
+ 11    0      0   11 12:12:12:0       yes 3900.0000 1200.0000 3000.000
+ 12    0      0   12 13:13:13:0       yes 3900.0000 1200.0000 3000.000
+ 13    0      0   13 16:16:16:0       yes 3900.0000 1200.0000 3000.000
+ 14    0      0   14 17:17:17:0       yes 3900.0000 1200.0000 3000.000
+ 15    0      0   15 18:18:18:0       yes 3900.0000 1200.0000 3000.000
+ 16    0      0   16 19:19:19:0       yes 3900.0000 1200.0000 3000.000
+ 17    0      0   17 20:20:20:0       yes 3900.0000 1200.0000 3000.000
+ 18    0      0   18 21:21:21:0       yes 3900.0000 1200.0000 3000.000
+ 19    0      0   19 25:25:25:0       yes 3900.0000 1200.0000 3000.000
+ 20    0      0   20 26:26:26:0       yes 3900.0000 1200.0000 3000.000
+ 21    0      0   21 27:27:27:0       yes 3900.0000 1200.0000 3000.000
+ 22    0      0   22 28:28:28:0       yes 3900.0000 1200.0000 3000.000
+ 23    0      0   23 29:29:29:0       yes 3900.0000 1200.0000 3000.000
+ 24    1      1   24 32:32:32:1       yes 3900.0000 1200.0000 3000.000
+ 25    1      1   25 33:33:33:1       yes 3900.0000 1200.0000 3000.000
+ 26    1      1   26 34:34:34:1       yes 3900.0000 1200.0000 3000.000
+ 27    1      1   27 35:35:35:1       yes 3900.0000 1200.0000 1200.118
+ 28    1      1   28 36:36:36:1       yes 3900.0000 1200.0000 3000.000
+ 29    1      1   29 37:37:37:1       yes 3900.0000 1200.0000 3000.000
+ 30    1      1   30 38:38:38:1       yes 3900.0000 1200.0000 3000.000
+ 31    1      1   31 41:41:41:1       yes 3900.0000 1200.0000 3000.000
+ 32    1      1   32 42:42:42:1       yes 3900.0000 1200.0000 1200.148
+ 33    1      1   33 43:43:43:1       yes 3900.0000 1200.0000 3000.000
+ 34    1      1   34 44:44:44:1       yes 3900.0000 1200.0000 3000.000
+ 35    1      1   35 45:45:45:1       yes 3900.0000 1200.0000 3000.000
+ 36    1      1   36 48:48:48:1       yes 3900.0000 1200.0000 3000.000
+ 37    1      1   37 49:49:49:1       yes 3900.0000 1200.0000 3000.000
+ 38    1      1   38 50:50:50:1       yes 3900.0000 1200.0000 1200.177
+ 39    1      1   39 51:51:51:1       yes 3900.0000 1200.0000 3000.000
+ 40    1      1   40 52:52:52:1       yes 3900.0000 1200.0000 3000.000
+ 41    1      1   41 53:53:53:1       yes 3900.0000 1200.0000 3000.000
+ 42    1      1   42 56:56:56:1       yes 3900.0000 1200.0000 3000.000
+ 43    1      1   43 57:57:57:1       yes 3900.0000 1200.0000 3000.000
+ 44    1      1   44 58:58:58:1       yes 3900.0000 1200.0000 3000.000
+ 45    1      1   45 59:59:59:1       yes 3900.0000 1200.0000 3000.000
+ 46    1      1   46 60:60:60:1       yes 3900.0000 1200.0000 3000.000
+ 47    1      1   47 61:61:61:1       yes 3900.0000 1200.0000 3000.000
+ 48    0      0    0 0:0:0:0          yes 3900.0000 1200.0000 3000.000
+ 49    0      0    1 1:1:1:0          yes 3900.0000 1200.0000 3000.000
+ 50    0      0    2 2:2:2:0          yes 3900.0000 1200.0000 3000.000
+ 51    0      0    3 3:3:3:0          yes 3900.0000 1200.0000 3000.000
+ 52    0      0    4 4:4:4:0          yes 3900.0000 1200.0000 2254.070
+ 53    0      0    5 5:5:5:0          yes 3900.0000 1200.0000 2551.035
+ 54    0      0    6 6:6:6:0          yes 3900.0000 1200.0000 3000.000
+ 55    0      0    7 8:8:8:0          yes 3900.0000 1200.0000 3000.000
+ 56    0      0    8 9:9:9:0          yes 3900.0000 1200.0000 3000.000
+ 57    0      0    9 10:10:10:0       yes 3900.0000 1200.0000 3000.000
+ 58    0      0   10 11:11:11:0       yes 3900.0000 1200.0000 3000.000
+ 59    0      0   11 12:12:12:0       yes 3900.0000 1200.0000 3000.000
+ 60    0      0   12 13:13:13:0       yes 3900.0000 1200.0000 3000.000
+ 61    0      0   13 16:16:16:0       yes 3900.0000 1200.0000 3000.000
+ 62    0      0   14 17:17:17:0       yes 3900.0000 1200.0000 3000.000
+ 63    0      0   15 18:18:18:0       yes 3900.0000 1200.0000 3000.000
+ 64    0      0   16 19:19:19:0       yes 3900.0000 1200.0000 3000.000
+ 65    0      0   17 20:20:20:0       yes 3900.0000 1200.0000 3000.000
+ 66    0      0   18 21:21:21:0       yes 3900.0000 1200.0000 3000.000
+ 67    0      0   19 25:25:25:0       yes 3900.0000 1200.0000 3000.000
+ 68    0      0   20 26:26:26:0       yes 3900.0000 1200.0000 3000.000
+ 69    0      0   21 27:27:27:0       yes 3900.0000 1200.0000 3000.000
+ 70    0      0   22 28:28:28:0       yes 3900.0000 1200.0000 3000.000
+ 71    0      0   23 29:29:29:0       yes 3900.0000 1200.0000 3000.000
+ 72    1      1   24 32:32:32:1       yes 3900.0000 1200.0000 3000.000
+ 73    1      1   25 33:33:33:1       yes 3900.0000 1200.0000 3000.000
+ 74    1      1   26 34:34:34:1       yes 3900.0000 1200.0000 3000.000
+ 75    1      1   27 35:35:35:1       yes 3900.0000 1200.0000 3000.000
+ 76    1      1   28 36:36:36:1       yes 3900.0000 1200.0000 3000.000
+ 77    1      1   29 37:37:37:1       yes 3900.0000 1200.0000 1200.280
+ 78    1      1   30 38:38:38:1       yes 3900.0000 1200.0000 1200.400
+ 79    1      1   31 41:41:41:1       yes 3900.0000 1200.0000 3000.000
+ 80    1      1   32 42:42:42:1       yes 3900.0000 1200.0000 3000.000
+ 81    1      1   33 43:43:43:1       yes 3900.0000 1200.0000 1200.002
+ 82    1      1   34 44:44:44:1       yes 3900.0000 1200.0000 1200.281
+ 83    1      1   35 45:45:45:1       yes 3900.0000 1200.0000 1200.072
+ 84    1      1   36 48:48:48:1       yes 3900.0000 1200.0000 1200.528
+ 85    1      1   37 49:49:49:1       yes 3900.0000 1200.0000 1200.279
+ 86    1      1   38 50:50:50:1       yes 3900.0000 1200.0000 3000.000
+ 87    1      1   39 51:51:51:1       yes 3900.0000 1200.0000 1200.077
+ 88    1      1   40 52:52:52:1       yes 3900.0000 1200.0000 3000.000
+ 89    1      1   41 53:53:53:1       yes 3900.0000 1200.0000 3000.000
+ 90    1      1   42 56:56:56:1       yes 3900.0000 1200.0000 3000.000
+ 91    1      1   43 57:57:57:1       yes 3900.0000 1200.0000 3000.000
+ 92    1      1   44 58:58:58:1       yes 3900.0000 1200.0000 3000.000
+ 93    1      1   45 59:59:59:1       yes 3900.0000 1200.0000 3000.000
+ 94    1      1   46 60:60:60:1       yes 3900.0000 1200.0000 3000.000
+ 95    1      1   47 61:61:61:1       yes 3900.0000 1200.0000 3000.000
+
+
+
+=== lstopo  ===
+Machine (189GB total)
+  Package L#0
+    NUMANode L#0 (P#0 94GB)
+    L3 L#0 (36MB)
+      L2 L#0 (1024KB) + L1d L#0 (32KB) + L1i L#0 (32KB) + Core L#0
+        PU L#0 (P#0)
+        PU L#1 (P#48)
+      L2 L#1 (1024KB) + L1d L#1 (32KB) + L1i L#1 (32KB) + Core L#1
+        PU L#2 (P#1)
+        PU L#3 (P#49)
+      L2 L#2 (1024KB) + L1d L#2 (32KB) + L1i L#2 (32KB) + Core L#2
+        PU L#4 (P#2)
+        PU L#5 (P#50)
+      L2 L#3 (1024KB) + L1d L#3 (32KB) + L1i L#3 (32KB) + Core L#3
+        PU L#6 (P#3)
+        PU L#7 (P#51)
+      L2 L#4 (1024KB) + L1d L#4 (32KB) + L1i L#4 (32KB) + Core L#4
+        PU L#8 (P#4)
+        PU L#9 (P#52)
+      L2 L#5 (1024KB) + L1d L#5 (32KB) + L1i L#5 (32KB) + Core L#5
+        PU L#10 (P#5)
+        PU L#11 (P#53)
+      L2 L#6 (1024KB) + L1d L#6 (32KB) + L1i L#6 (32KB) + Core L#6
+        PU L#12 (P#6)
+        PU L#13 (P#54)
+      L2 L#7 (1024KB) + L1d L#7 (32KB) + L1i L#7 (32KB) + Core L#7
+        PU L#14 (P#7)
+        PU L#15 (P#55)
+      L2 L#8 (1024KB) + L1d L#8 (32KB) + L1i L#8 (32KB) + Core L#8
+        PU L#16 (P#8)
+        PU L#17 (P#56)
+      L2 L#9 (1024KB) + L1d L#9 (32KB) + L1i L#9 (32KB) + Core L#9
+        PU L#18 (P#9)
+        PU L#19 (P#57)
+      L2 L#10 (1024KB) + L1d L#10 (32KB) + L1i L#10 (32KB) + Core L#10
+        PU L#20 (P#10)
+        PU L#21 (P#58)
+      L2 L#11 (1024KB) + L1d L#11 (32KB) + L1i L#11 (32KB) + Core L#11
+        PU L#22 (P#11)
+        PU L#23 (P#59)
+      L2 L#12 (1024KB) + L1d L#12 (32KB) + L1i L#12 (32KB) + Core L#12
+        PU L#24 (P#12)
+        PU L#25 (P#60)
+      L2 L#13 (1024KB) + L1d L#13 (32KB) + L1i L#13 (32KB) + Core L#13
+        PU L#26 (P#13)
+        PU L#27 (P#61)
+      L2 L#14 (1024KB) + L1d L#14 (32KB) + L1i L#14 (32KB) + Core L#14
+        PU L#28 (P#14)
+        PU L#29 (P#62)
+      L2 L#15 (1024KB) + L1d L#15 (32KB) + L1i L#15 (32KB) + Core L#15
+        PU L#30 (P#15)
+        PU L#31 (P#63)
+      L2 L#16 (1024KB) + L1d L#16 (32KB) + L1i L#16 (32KB) + Core L#16
+        PU L#32 (P#16)
+        PU L#33 (P#64)
+      L2 L#17 (1024KB) + L1d L#17 (32KB) + L1i L#17 (32KB) + Core L#17
+        PU L#34 (P#17)
+        PU L#35 (P#65)
+      L2 L#18 (1024KB) + L1d L#18 (32KB) + L1i L#18 (32KB) + Core L#18
+        PU L#36 (P#18)
+        PU L#37 (P#66)
+      L2 L#19 (1024KB) + L1d L#19 (32KB) + L1i L#19 (32KB) + Core L#19
+        PU L#38 (P#19)
+        PU L#39 (P#67)
+      L2 L#20 (1024KB) + L1d L#20 (32KB) + L1i L#20 (32KB) + Core L#20
+        PU L#40 (P#20)
+        PU L#41 (P#68)
+      L2 L#21 (1024KB) + L1d L#21 (32KB) + L1i L#21 (32KB) + Core L#21
+        PU L#42 (P#21)
+        PU L#43 (P#69)
+      L2 L#22 (1024KB) + L1d L#22 (32KB) + L1i L#22 (32KB) + Core L#22
+        PU L#44 (P#22)
+        PU L#45 (P#70)
+      L2 L#23 (1024KB) + L1d L#23 (32KB) + L1i L#23 (32KB) + Core L#23
+        PU L#46 (P#23)
+        PU L#47 (P#71)
+    HostBridge
+      PCI 00:11.5 (SATA)
+      PCI 00:17.0 (SATA)
+    HostBridge
+      PCIBridge
+        PCIBridge
+          PCIBridge
+            PCI 7d:00.0 (Ethernet)
+              Net "enp125s0"
+      PCIBridge
+        PCIBridge
+          PCIBridge
+            PCI 90:00.0 (NVMExp)
+              Block(Disk) "nvme0n1"
+  Package L#1
+    NUMANode L#1 (P#1 94GB)
+    L3 L#1 (36MB)
+      L2 L#24 (1024KB) + L1d L#24 (32KB) + L1i L#24 (32KB) + Core L#24
+        PU L#48 (P#24)
+        PU L#49 (P#72)
+      L2 L#25 (1024KB) + L1d L#25 (32KB) + L1i L#25 (32KB) + Core L#25
+        PU L#50 (P#25)
+        PU L#51 (P#73)
+      L2 L#26 (1024KB) + L1d L#26 (32KB) + L1i L#26 (32KB) + Core L#26
+        PU L#52 (P#26)
+        PU L#53 (P#74)
+      L2 L#27 (1024KB) + L1d L#27 (32KB) + L1i L#27 (32KB) + Core L#27
+        PU L#54 (P#27)
+        PU L#55 (P#75)
+      L2 L#28 (1024KB) + L1d L#28 (32KB) + L1i L#28 (32KB) + Core L#28
+        PU L#56 (P#28)
+        PU L#57 (P#76)
+      L2 L#29 (1024KB) + L1d L#29 (32KB) + L1i L#29 (32KB) + Core L#29
+        PU L#58 (P#29)
+        PU L#59 (P#77)
+      L2 L#30 (1024KB) + L1d L#30 (32KB) + L1i L#30 (32KB) + Core L#30
+        PU L#60 (P#30)
+        PU L#61 (P#78)
+      L2 L#31 (1024KB) + L1d L#31 (32KB) + L1i L#31 (32KB) + Core L#31
+        PU L#62 (P#31)
+        PU L#63 (P#79)
+      L2 L#32 (1024KB) + L1d L#32 (32KB) + L1i L#32 (32KB) + Core L#32
+        PU L#64 (P#32)
+        PU L#65 (P#80)
+      L2 L#33 (1024KB) + L1d L#33 (32KB) + L1i L#33 (32KB) + Core L#33
+        PU L#66 (P#33)
+        PU L#67 (P#81)
+      L2 L#34 (1024KB) + L1d L#34 (32KB) + L1i L#34 (32KB) + Core L#34
+        PU L#68 (P#34)
+        PU L#69 (P#82)
+      L2 L#35 (1024KB) + L1d L#35 (32KB) + L1i L#35 (32KB) + Core L#35
+        PU L#70 (P#35)
+        PU L#71 (P#83)
+      L2 L#36 (1024KB) + L1d L#36 (32KB) + L1i L#36 (32KB) + Core L#36
+        PU L#72 (P#36)
+        PU L#73 (P#84)
+      L2 L#37 (1024KB) + L1d L#37 (32KB) + L1i L#37 (32KB) + Core L#37
+        PU L#74 (P#37)
+        PU L#75 (P#85)
+      L2 L#38 (1024KB) + L1d L#38 (32KB) + L1i L#38 (32KB) + Core L#38
+        PU L#76 (P#38)
+        PU L#77 (P#86)
+      L2 L#39 (1024KB) + L1d L#39 (32KB) + L1i L#39 (32KB) + Core L#39
+        PU L#78 (P#39)
+        PU L#79 (P#87)
+      L2 L#40 (1024KB) + L1d L#40 (32KB) + L1i L#40 (32KB) + Core L#40
+        PU L#80 (P#40)
+        PU L#81 (P#88)
+      L2 L#41 (1024KB) + L1d L#41 (32KB) + L1i L#41 (32KB) + Core L#41
+        PU L#82 (P#41)
+        PU L#83 (P#89)
+      L2 L#42 (1024KB) + L1d L#42 (32KB) + L1i L#42 (32KB) + Core L#42
+        PU L#84 (P#42)
+        PU L#85 (P#90)
+      L2 L#43 (1024KB) + L1d L#43 (32KB) + L1i L#43 (32KB) + Core L#43
+        PU L#86 (P#43)
+        PU L#87 (P#91)
+      L2 L#44 (1024KB) + L1d L#44 (32KB) + L1i L#44 (32KB) + Core L#44
+        PU L#88 (P#44)
+        PU L#89 (P#92)
+      L2 L#45 (1024KB) + L1d L#45 (32KB) + L1i L#45 (32KB) + Core L#45
+        PU L#90 (P#45)
+        PU L#91 (P#93)
+      L2 L#46 (1024KB) + L1d L#46 (32KB) + L1i L#46 (32KB) + Core L#46
+        PU L#92 (P#46)
+        PU L#93 (P#94)
+      L2 L#47 (1024KB) + L1d L#47 (32KB) + L1i L#47 (32KB) + Core L#47
+        PU L#94 (P#47)
+        PU L#95 (P#95)
+
+
+
+=== numactl --hardware ===
+available: 2 nodes (0-1)
+node 0 cpus: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71
+node 0 size: 96328 MB
+node 0 free: 67586 MB
+node 1 cpus: 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95
+node 1 size: 96698 MB
+node 1 free: 76182 MB
+node distances:
+node   0   1 
+  0:  10  21 
+  1:  21  10 
+
+
+
+=== Git Commit Information ===
+commit 408f2b20313862d5080e46f54429891d56d693d0
+Author: Victor Baybekov <vbaybekov@gmail.com>
+Date:   Fri Feb 2 10:57:38 2024 +0100
+
+    Mute prepare output

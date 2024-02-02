@@ -1,0 +1,132 @@
+=== lscpu ===
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Address sizes:                      46 bits physical, 48 bits virtual
+Byte Order:                         Little Endian
+CPU(s):                             20
+On-line CPU(s) list:                0-11
+Off-line CPU(s) list:               12-19
+Vendor ID:                          GenuineIntel
+Model name:                         13th Gen Intel(R) Core(TM) i5-13500
+CPU family:                         6
+Model:                              191
+Thread(s) per core:                 2
+Core(s) per socket:                 14
+Socket(s):                          1
+Stepping:                           2
+CPU max MHz:                        2500.0000
+CPU min MHz:                        800.0000
+BogoMIPS:                           4992.00
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect avx_vnni dtherm arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq tme rdpid movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities
+Virtualization:                     VT-x
+L1d cache:                          544 KiB (14 instances)
+L1i cache:                          704 KiB (14 instances)
+L2 cache:                           11.5 MiB (8 instances)
+L3 cache:                           24 MiB (1 instance)
+NUMA node(s):                       1
+NUMA node0 CPU(s):                  0-19
+Vulnerability Gather data sampling: Not affected
+Vulnerability Itlb multihit:        Not affected
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Not affected
+Vulnerability Retbleed:             Not affected
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; Enhanced / Automatic IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS SW sequence
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Not affected
+
+
+
+=== lscpu -e ===
+CPU NODE SOCKET CORE L1d:L1i:L2:L3 ONLINE    MAXMHZ   MINMHZ      MHZ
+  0    0      0    0 0:0:0:0          yes 2500.0000 800.0000 2500.000
+  1    0      0    0 0:0:0:0          yes 2500.0000 800.0000 2500.000
+  2    0      0    1 4:4:1:0          yes 2500.0000 800.0000 2196.181
+  3    0      0    1 4:4:1:0          yes 2500.0000 800.0000  800.000
+  4    0      0    2 8:8:2:0          yes 2500.0000 800.0000 2459.815
+  5    0      0    2 8:8:2:0          yes 2500.0000 800.0000 2500.000
+  6    0      0    3 12:12:3:0        yes 2500.0000 800.0000 2494.480
+  7    0      0    3 12:12:3:0        yes 2500.0000 800.0000  800.000
+  8    0      0    4 16:16:4:0        yes 2500.0000 800.0000 2479.734
+  9    0      0    4 16:16:4:0        yes 2500.0000 800.0000  800.000
+ 10    0      0    5 20:20:5:0        yes 2500.0000 800.0000 2354.550
+ 11    0      0    5 20:20:5:0        yes 2500.0000 800.0000 2500.000
+ 12    0      0    6 24:24:6:0         no 1800.0000 800.0000        -
+ 13    0      0    7 25:25:6:0         no 1800.0000 800.0000        -
+ 14    0      0    8 26:26:6:0         no 1800.0000 800.0000        -
+ 15    0      0    9 27:27:6:0         no 1800.0000 800.0000        -
+ 16    0      0   10 28:28:7:0         no 1800.0000 800.0000        -
+ 17    0      0   11 29:29:7:0         no 1800.0000 800.0000        -
+ 18    0      0   12 30:30:7:0         no 1800.0000 800.0000        -
+ 19    0      0   13 31:31:7:0         no 1800.0000 800.0000        -
+
+
+
+=== lstopo  ===
+Machine (126GB total)
+  Package L#0
+    NUMANode L#0 (P#0 126GB)
+    L3 L#0 (24MB)
+      L2 L#0 (1280KB) + L1d L#0 (48KB) + L1i L#0 (32KB) + Core L#0
+        PU L#0 (P#0)
+        PU L#1 (P#1)
+      L2 L#1 (1280KB) + L1d L#1 (48KB) + L1i L#1 (32KB) + Core L#1
+        PU L#2 (P#2)
+        PU L#3 (P#3)
+      L2 L#2 (1280KB) + L1d L#2 (48KB) + L1i L#2 (32KB) + Core L#2
+        PU L#4 (P#4)
+        PU L#5 (P#5)
+      L2 L#3 (1280KB) + L1d L#3 (48KB) + L1i L#3 (32KB) + Core L#3
+        PU L#6 (P#6)
+        PU L#7 (P#7)
+      L2 L#4 (1280KB) + L1d L#4 (48KB) + L1i L#4 (32KB) + Core L#4
+        PU L#8 (P#8)
+        PU L#9 (P#9)
+      L2 L#5 (1280KB) + L1d L#5 (48KB) + L1i L#5 (32KB) + Core L#5
+        PU L#10 (P#10)
+        PU L#11 (P#11)
+  HostBridge
+    PCIBridge
+      PCI 01:00.0 (VGA)
+    PCI 00:02.0 (VGA)
+    PCIBridge
+      PCI 02:00.0 (NVMExp)
+        Block(Disk) "nvme0n1"
+    PCI 00:17.0 (SATA)
+      Block "sdb"
+      Block "sda"
+    PCIBridge
+      PCI 03:00.0 (NVMExp)
+        Block(Disk) "nvme1n1"
+    PCIBridge
+      PCI 06:00.0 (Ethernet)
+    PCIBridge
+      PCI 07:00.0 (Ethernet)
+        OpenFabrics "mlx4_0"
+    PCIBridge
+      PCI 08:00.0 (NVMExp)
+        Block(Disk) "nvme2n1"
+
+
+
+=== numactl --hardware ===
+available: 1 nodes (0)
+node 0 cpus: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+node 0 size: 128547 MB
+node 0 free: 29566 MB
+node distances:
+node   0 
+  0:  10 
+
+
+
+=== Git Commit Information ===
+commit 17ce00a258794fc4d67e5640aed6f61d571e2fb9
+Author: Victor Baybekov <vbaybekov@gmail.com>
+Date:   Fri Feb 2 12:18:20 2024 +0100
+
+    Update NimaAra

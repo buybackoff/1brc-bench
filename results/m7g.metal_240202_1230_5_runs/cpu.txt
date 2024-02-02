@@ -1,0 +1,203 @@
+=== lscpu ===
+Architecture:                       aarch64
+CPU op-mode(s):                     32-bit, 64-bit
+Byte Order:                         Little Endian
+CPU(s):                             64
+On-line CPU(s) list:                0-63
+Vendor ID:                          ARM
+Model:                              1
+Thread(s) per core:                 1
+Core(s) per socket:                 64
+Socket(s):                          1
+Stepping:                           r1p1
+BogoMIPS:                           2100.00
+Flags:                              fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp cpuid asimdrdm jscvt fcma lrcpc dcpop sha3 sm3 sm4 asimddp sha512 sve asimdfhm dit uscat ilrcpc flagm ssbs paca pacg dcpodp svei8mm svebf16 i8mm bf16 dgh rng
+L1d cache:                          4 MiB (64 instances)
+L1i cache:                          4 MiB (64 instances)
+L2 cache:                           64 MiB (64 instances)
+L3 cache:                           32 MiB (1 instance)
+NUMA node(s):                       1
+NUMA node0 CPU(s):                  0-63
+Vulnerability Gather data sampling: Not affected
+Vulnerability Itlb multihit:        Not affected
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Not affected
+Vulnerability Retbleed:             Not affected
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:           Mitigation; __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; CSV2, BHB
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Not affected
+
+
+
+=== lscpu -e ===
+CPU NODE SOCKET CORE L1d:L1i:L2:L3 ONLINE
+  0    0      0    0 0:0:0:0          yes
+  1    0      0    1 1:1:1:0          yes
+  2    0      0    2 2:2:2:0          yes
+  3    0      0    3 3:3:3:0          yes
+  4    0      0    4 4:4:4:0          yes
+  5    0      0    5 5:5:5:0          yes
+  6    0      0    6 6:6:6:0          yes
+  7    0      0    7 7:7:7:0          yes
+  8    0      0    8 8:8:8:0          yes
+  9    0      0    9 9:9:9:0          yes
+ 10    0      0   10 10:10:10:0       yes
+ 11    0      0   11 11:11:11:0       yes
+ 12    0      0   12 12:12:12:0       yes
+ 13    0      0   13 13:13:13:0       yes
+ 14    0      0   14 14:14:14:0       yes
+ 15    0      0   15 15:15:15:0       yes
+ 16    0      0   16 16:16:16:0       yes
+ 17    0      0   17 17:17:17:0       yes
+ 18    0      0   18 18:18:18:0       yes
+ 19    0      0   19 19:19:19:0       yes
+ 20    0      0   20 20:20:20:0       yes
+ 21    0      0   21 21:21:21:0       yes
+ 22    0      0   22 22:22:22:0       yes
+ 23    0      0   23 23:23:23:0       yes
+ 24    0      0   24 24:24:24:0       yes
+ 25    0      0   25 25:25:25:0       yes
+ 26    0      0   26 26:26:26:0       yes
+ 27    0      0   27 27:27:27:0       yes
+ 28    0      0   28 28:28:28:0       yes
+ 29    0      0   29 29:29:29:0       yes
+ 30    0      0   30 30:30:30:0       yes
+ 31    0      0   31 31:31:31:0       yes
+ 32    0      0   32 32:32:32:0       yes
+ 33    0      0   33 33:33:33:0       yes
+ 34    0      0   34 34:34:34:0       yes
+ 35    0      0   35 35:35:35:0       yes
+ 36    0      0   36 36:36:36:0       yes
+ 37    0      0   37 37:37:37:0       yes
+ 38    0      0   38 38:38:38:0       yes
+ 39    0      0   39 39:39:39:0       yes
+ 40    0      0   40 40:40:40:0       yes
+ 41    0      0   41 41:41:41:0       yes
+ 42    0      0   42 42:42:42:0       yes
+ 43    0      0   43 43:43:43:0       yes
+ 44    0      0   44 44:44:44:0       yes
+ 45    0      0   45 45:45:45:0       yes
+ 46    0      0   46 46:46:46:0       yes
+ 47    0      0   47 47:47:47:0       yes
+ 48    0      0   48 48:48:48:0       yes
+ 49    0      0   49 49:49:49:0       yes
+ 50    0      0   50 50:50:50:0       yes
+ 51    0      0   51 51:51:51:0       yes
+ 52    0      0   52 52:52:52:0       yes
+ 53    0      0   53 53:53:53:0       yes
+ 54    0      0   54 54:54:54:0       yes
+ 55    0      0   55 55:55:55:0       yes
+ 56    0      0   56 56:56:56:0       yes
+ 57    0      0   57 57:57:57:0       yes
+ 58    0      0   58 58:58:58:0       yes
+ 59    0      0   59 59:59:59:0       yes
+ 60    0      0   60 60:60:60:0       yes
+ 61    0      0   61 61:61:61:0       yes
+ 62    0      0   62 62:62:62:0       yes
+ 63    0      0   63 63:63:63:0       yes
+
+
+
+=== lstopo  ===
+Machine (126GB total)
+  Package L#0
+    NUMANode L#0 (P#0 126GB)
+    L3 L#0 (32MB)
+      L2 L#0 (1024KB) + L1d L#0 (64KB) + L1i L#0 (64KB) + Core L#0 + PU L#0 (P#0)
+      L2 L#1 (1024KB) + L1d L#1 (64KB) + L1i L#1 (64KB) + Core L#1 + PU L#1 (P#1)
+      L2 L#2 (1024KB) + L1d L#2 (64KB) + L1i L#2 (64KB) + Core L#2 + PU L#2 (P#2)
+      L2 L#3 (1024KB) + L1d L#3 (64KB) + L1i L#3 (64KB) + Core L#3 + PU L#3 (P#3)
+      L2 L#4 (1024KB) + L1d L#4 (64KB) + L1i L#4 (64KB) + Core L#4 + PU L#4 (P#4)
+      L2 L#5 (1024KB) + L1d L#5 (64KB) + L1i L#5 (64KB) + Core L#5 + PU L#5 (P#5)
+      L2 L#6 (1024KB) + L1d L#6 (64KB) + L1i L#6 (64KB) + Core L#6 + PU L#6 (P#6)
+      L2 L#7 (1024KB) + L1d L#7 (64KB) + L1i L#7 (64KB) + Core L#7 + PU L#7 (P#7)
+      L2 L#8 (1024KB) + L1d L#8 (64KB) + L1i L#8 (64KB) + Core L#8 + PU L#8 (P#8)
+      L2 L#9 (1024KB) + L1d L#9 (64KB) + L1i L#9 (64KB) + Core L#9 + PU L#9 (P#9)
+      L2 L#10 (1024KB) + L1d L#10 (64KB) + L1i L#10 (64KB) + Core L#10 + PU L#10 (P#10)
+      L2 L#11 (1024KB) + L1d L#11 (64KB) + L1i L#11 (64KB) + Core L#11 + PU L#11 (P#11)
+      L2 L#12 (1024KB) + L1d L#12 (64KB) + L1i L#12 (64KB) + Core L#12 + PU L#12 (P#12)
+      L2 L#13 (1024KB) + L1d L#13 (64KB) + L1i L#13 (64KB) + Core L#13 + PU L#13 (P#13)
+      L2 L#14 (1024KB) + L1d L#14 (64KB) + L1i L#14 (64KB) + Core L#14 + PU L#14 (P#14)
+      L2 L#15 (1024KB) + L1d L#15 (64KB) + L1i L#15 (64KB) + Core L#15 + PU L#15 (P#15)
+      L2 L#16 (1024KB) + L1d L#16 (64KB) + L1i L#16 (64KB) + Core L#16 + PU L#16 (P#16)
+      L2 L#17 (1024KB) + L1d L#17 (64KB) + L1i L#17 (64KB) + Core L#17 + PU L#17 (P#17)
+      L2 L#18 (1024KB) + L1d L#18 (64KB) + L1i L#18 (64KB) + Core L#18 + PU L#18 (P#18)
+      L2 L#19 (1024KB) + L1d L#19 (64KB) + L1i L#19 (64KB) + Core L#19 + PU L#19 (P#19)
+      L2 L#20 (1024KB) + L1d L#20 (64KB) + L1i L#20 (64KB) + Core L#20 + PU L#20 (P#20)
+      L2 L#21 (1024KB) + L1d L#21 (64KB) + L1i L#21 (64KB) + Core L#21 + PU L#21 (P#21)
+      L2 L#22 (1024KB) + L1d L#22 (64KB) + L1i L#22 (64KB) + Core L#22 + PU L#22 (P#22)
+      L2 L#23 (1024KB) + L1d L#23 (64KB) + L1i L#23 (64KB) + Core L#23 + PU L#23 (P#23)
+      L2 L#24 (1024KB) + L1d L#24 (64KB) + L1i L#24 (64KB) + Core L#24 + PU L#24 (P#24)
+      L2 L#25 (1024KB) + L1d L#25 (64KB) + L1i L#25 (64KB) + Core L#25 + PU L#25 (P#25)
+      L2 L#26 (1024KB) + L1d L#26 (64KB) + L1i L#26 (64KB) + Core L#26 + PU L#26 (P#26)
+      L2 L#27 (1024KB) + L1d L#27 (64KB) + L1i L#27 (64KB) + Core L#27 + PU L#27 (P#27)
+      L2 L#28 (1024KB) + L1d L#28 (64KB) + L1i L#28 (64KB) + Core L#28 + PU L#28 (P#28)
+      L2 L#29 (1024KB) + L1d L#29 (64KB) + L1i L#29 (64KB) + Core L#29 + PU L#29 (P#29)
+      L2 L#30 (1024KB) + L1d L#30 (64KB) + L1i L#30 (64KB) + Core L#30 + PU L#30 (P#30)
+      L2 L#31 (1024KB) + L1d L#31 (64KB) + L1i L#31 (64KB) + Core L#31 + PU L#31 (P#31)
+      L2 L#32 (1024KB) + L1d L#32 (64KB) + L1i L#32 (64KB) + Core L#32 + PU L#32 (P#32)
+      L2 L#33 (1024KB) + L1d L#33 (64KB) + L1i L#33 (64KB) + Core L#33 + PU L#33 (P#33)
+      L2 L#34 (1024KB) + L1d L#34 (64KB) + L1i L#34 (64KB) + Core L#34 + PU L#34 (P#34)
+      L2 L#35 (1024KB) + L1d L#35 (64KB) + L1i L#35 (64KB) + Core L#35 + PU L#35 (P#35)
+      L2 L#36 (1024KB) + L1d L#36 (64KB) + L1i L#36 (64KB) + Core L#36 + PU L#36 (P#36)
+      L2 L#37 (1024KB) + L1d L#37 (64KB) + L1i L#37 (64KB) + Core L#37 + PU L#37 (P#37)
+      L2 L#38 (1024KB) + L1d L#38 (64KB) + L1i L#38 (64KB) + Core L#38 + PU L#38 (P#38)
+      L2 L#39 (1024KB) + L1d L#39 (64KB) + L1i L#39 (64KB) + Core L#39 + PU L#39 (P#39)
+      L2 L#40 (1024KB) + L1d L#40 (64KB) + L1i L#40 (64KB) + Core L#40 + PU L#40 (P#40)
+      L2 L#41 (1024KB) + L1d L#41 (64KB) + L1i L#41 (64KB) + Core L#41 + PU L#41 (P#41)
+      L2 L#42 (1024KB) + L1d L#42 (64KB) + L1i L#42 (64KB) + Core L#42 + PU L#42 (P#42)
+      L2 L#43 (1024KB) + L1d L#43 (64KB) + L1i L#43 (64KB) + Core L#43 + PU L#43 (P#43)
+      L2 L#44 (1024KB) + L1d L#44 (64KB) + L1i L#44 (64KB) + Core L#44 + PU L#44 (P#44)
+      L2 L#45 (1024KB) + L1d L#45 (64KB) + L1i L#45 (64KB) + Core L#45 + PU L#45 (P#45)
+      L2 L#46 (1024KB) + L1d L#46 (64KB) + L1i L#46 (64KB) + Core L#46 + PU L#46 (P#46)
+      L2 L#47 (1024KB) + L1d L#47 (64KB) + L1i L#47 (64KB) + Core L#47 + PU L#47 (P#47)
+      L2 L#48 (1024KB) + L1d L#48 (64KB) + L1i L#48 (64KB) + Core L#48 + PU L#48 (P#48)
+      L2 L#49 (1024KB) + L1d L#49 (64KB) + L1i L#49 (64KB) + Core L#49 + PU L#49 (P#49)
+      L2 L#50 (1024KB) + L1d L#50 (64KB) + L1i L#50 (64KB) + Core L#50 + PU L#50 (P#50)
+      L2 L#51 (1024KB) + L1d L#51 (64KB) + L1i L#51 (64KB) + Core L#51 + PU L#51 (P#51)
+      L2 L#52 (1024KB) + L1d L#52 (64KB) + L1i L#52 (64KB) + Core L#52 + PU L#52 (P#52)
+      L2 L#53 (1024KB) + L1d L#53 (64KB) + L1i L#53 (64KB) + Core L#53 + PU L#53 (P#53)
+      L2 L#54 (1024KB) + L1d L#54 (64KB) + L1i L#54 (64KB) + Core L#54 + PU L#54 (P#54)
+      L2 L#55 (1024KB) + L1d L#55 (64KB) + L1i L#55 (64KB) + Core L#55 + PU L#55 (P#55)
+      L2 L#56 (1024KB) + L1d L#56 (64KB) + L1i L#56 (64KB) + Core L#56 + PU L#56 (P#56)
+      L2 L#57 (1024KB) + L1d L#57 (64KB) + L1i L#57 (64KB) + Core L#57 + PU L#57 (P#57)
+      L2 L#58 (1024KB) + L1d L#58 (64KB) + L1i L#58 (64KB) + Core L#58 + PU L#58 (P#58)
+      L2 L#59 (1024KB) + L1d L#59 (64KB) + L1i L#59 (64KB) + Core L#59 + PU L#59 (P#59)
+      L2 L#60 (1024KB) + L1d L#60 (64KB) + L1i L#60 (64KB) + Core L#60 + PU L#60 (P#60)
+      L2 L#61 (1024KB) + L1d L#61 (64KB) + L1i L#61 (64KB) + Core L#61 + PU L#61 (P#61)
+      L2 L#62 (1024KB) + L1d L#62 (64KB) + L1i L#62 (64KB) + Core L#62 + PU L#62 (P#62)
+      L2 L#63 (1024KB) + L1d L#63 (64KB) + L1i L#63 (64KB) + Core L#63 + PU L#63 (P#63)
+  HostBridge
+    PCIBridge
+      PCIBridge
+        PCIBridge
+          PCI 0001:04:00.0 (NVMExp)
+            Block(Disk) "nvme0n1"
+        PCIBridge
+          PCI 0001:24:00.0 (Ethernet)
+            Net "enP1s33"
+
+
+
+=== numactl --hardware ===
+available: 1 nodes (0)
+node 0 cpus: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63
+node 0 size: 128544 MB
+node 0 free: 78929 MB
+node distances:
+node   0 
+  0:  10 
+
+
+
+=== Git Commit Information ===
+commit 17ce00a258794fc4d67e5640aed6f61d571e2fb9
+Author: Victor Baybekov <vbaybekov@gmail.com>
+Date:   Fri Feb 2 12:18:20 2024 +0100
+
+    Update NimaAra

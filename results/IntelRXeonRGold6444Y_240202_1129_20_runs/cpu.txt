@@ -1,0 +1,271 @@
+=== lscpu ===
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Address sizes:                      46 bits physical, 57 bits virtual
+Byte Order:                         Little Endian
+CPU(s):                             64
+On-line CPU(s) list:                0-63
+Vendor ID:                          GenuineIntel
+Model name:                         Intel(R) Xeon(R) Gold 6444Y
+CPU family:                         6
+Model:                              143
+Thread(s) per core:                 2
+Core(s) per socket:                 16
+Socket(s):                          2
+Stepping:                           8
+CPU max MHz:                        3600.0000
+CPU min MHz:                        800.0000
+BogoMIPS:                           7200.00
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cat_l2 cdp_l3 cdp_l2 ssbd mba ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm rdt_a avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb intel_pt avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local split_lock_detect avx_vnni avx512_bf16 wbnoinvd dtherm arat pln pts hfi avx512vbmi umip pku ospke waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg tme avx512_vpopcntdq la57 rdpid bus_lock_detect cldemote movdiri movdir64b enqcmd fsrm md_clear serialize tsxldtrk pconfig arch_lbr ibt amx_bf16 avx512_fp16 amx_tile amx_int8 flush_l1d arch_capabilities
+L1d cache:                          1.5 MiB (32 instances)
+L1i cache:                          1 MiB (32 instances)
+L2 cache:                           64 MiB (32 instances)
+L3 cache:                           90 MiB (2 instances)
+NUMA node(s):                       2
+NUMA node0 CPU(s):                  0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62
+NUMA node1 CPU(s):                  1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49,51,53,55,57,59,61,63
+Vulnerability Gather data sampling: Not affected
+Vulnerability Itlb multihit:        Not affected
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Not affected
+Vulnerability Retbleed:             Not affected
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Vulnerable
+Vulnerability Spectre v1:           Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers
+Vulnerability Spectre v2:           Vulnerable, IBPB: disabled, STIBP: disabled, PBRSB-eIBRS: Vulnerable
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Not affected
+
+
+
+=== lscpu -e ===
+CPU NODE SOCKET CORE L1d:L1i:L2:L3 ONLINE    MAXMHZ   MINMHZ      MHZ
+  0    0      0    0 0:0:0:0          yes 3600.0000 800.0000 3600.009
+  1    1      1    1 64:64:64:1       yes 3600.0000 800.0000 3600.000
+  2    0      0    2 14:14:14:0       yes 3600.0000 800.0000 3600.009
+  3    1      1    3 77:77:77:1       yes 3600.0000 800.0000 3600.009
+  4    0      0    4 12:12:12:0       yes 3600.0000 800.0000 3600.009
+  5    1      1    5 70:70:70:1       yes 3600.0000 800.0000 3599.990
+  6    0      0    6 5:5:5:0          yes 3600.0000 800.0000 3600.000
+  7    1      1    7 65:65:65:1       yes 3600.0000 800.0000 3600.009
+  8    0      0    8 15:15:15:0       yes 3600.0000 800.0000 3600.000
+  9    1      1    9 75:75:75:1       yes 3600.0000 800.0000 3600.009
+ 10    0      0   10 6:6:6:0          yes 3600.0000 800.0000 3599.990
+ 11    1      1   11 67:67:67:1       yes 3600.0000 800.0000 3600.000
+ 12    0      0   12 1:1:1:0          yes 3600.0000 800.0000 3600.000
+ 13    1      1   13 79:79:79:1       yes 3600.0000 800.0000 3600.009
+ 14    0      0   14 10:10:10:0       yes 3600.0000 800.0000 3600.009
+ 15    1      1   15 73:73:73:1       yes 3600.0000 800.0000 3600.000
+ 16    0      0   16 11:11:11:0       yes 3600.0000 800.0000 3600.018
+ 17    1      1   17 74:74:74:1       yes 3600.0000 800.0000 3600.000
+ 18    0      0   18 7:7:7:0          yes 3600.0000 800.0000 3600.009
+ 19    1      1   19 68:68:68:1       yes 3600.0000 800.0000 3599.990
+ 20    0      0   20 4:4:4:0          yes 3600.0000 800.0000 3600.000
+ 21    1      1   21 78:78:78:1       yes 3600.0000 800.0000 3600.009
+ 22    0      0   22 8:8:8:0          yes 3600.0000 800.0000 3599.990
+ 23    1      1   23 69:69:69:1       yes 3600.0000 800.0000 3600.000
+ 24    0      0   24 13:13:13:0       yes 3600.0000 800.0000 3600.009
+ 25    1      1   25 76:76:76:1       yes 3600.0000 800.0000 3600.000
+ 26    0      0   26 2:2:2:0          yes 3600.0000 800.0000 3599.990
+ 27    1      1   27 71:71:71:1       yes 3600.0000 800.0000 3600.009
+ 28    0      0   28 9:9:9:0          yes 3600.0000 800.0000 3599.990
+ 29    1      1   29 66:66:66:1       yes 3600.0000 800.0000 3599.990
+ 30    0      0   30 3:3:3:0          yes 3600.0000 800.0000 3600.009
+ 31    1      1   31 72:72:72:1       yes 3600.0000 800.0000 3600.009
+ 32    0      0   20 4:4:4:0          yes 3600.0000 800.0000 3600.009
+ 33    1      1    1 64:64:64:1       yes 3600.0000 800.0000 3600.000
+ 34    0      0    2 14:14:14:0       yes 3600.0000 800.0000 3600.000
+ 35    1      1    3 77:77:77:1       yes 3600.0000 800.0000 3600.000
+ 36    0      0    4 12:12:12:0       yes 3600.0000 800.0000 3599.990
+ 37    1      1    5 70:70:70:1       yes 3600.0000 800.0000 3600.000
+ 38    0      0    6 5:5:5:0          yes 3600.0000 800.0000 3600.000
+ 39    1      1    7 65:65:65:1       yes 3600.0000 800.0000 3600.000
+ 40    0      0    8 15:15:15:0       yes 3600.0000 800.0000 3600.000
+ 41    1      1    9 75:75:75:1       yes 3600.0000 800.0000 3600.000
+ 42    0      0   10 6:6:6:0          yes 3600.0000 800.0000 3599.990
+ 43    1      1   11 67:67:67:1       yes 3600.0000 800.0000 3600.018
+ 44    0      0   12 1:1:1:0          yes 3600.0000 800.0000 3599.990
+ 45    1      1   13 79:79:79:1       yes 3600.0000 800.0000 3600.009
+ 46    0      0   14 10:10:10:0       yes 3600.0000 800.0000 3600.009
+ 47    1      1   15 73:73:73:1       yes 3600.0000 800.0000 3600.009
+ 48    0      0   16 11:11:11:0       yes 3600.0000 800.0000 3600.000
+ 49    1      1   17 74:74:74:1       yes 3600.0000 800.0000 3600.009
+ 50    0      0   18 7:7:7:0          yes 3600.0000 800.0000 3600.009
+ 51    1      1   19 68:68:68:1       yes 3600.0000 800.0000 3600.009
+ 52    0      0    0 0:0:0:0          yes 3600.0000 800.0000 3600.000
+ 53    1      1   21 78:78:78:1       yes 3600.0000 800.0000 3599.990
+ 54    0      0   22 8:8:8:0          yes 3600.0000 800.0000 3600.009
+ 55    1      1   23 69:69:69:1       yes 3600.0000 800.0000 3599.990
+ 56    0      0   24 13:13:13:0       yes 3600.0000 800.0000 3600.009
+ 57    1      1   25 76:76:76:1       yes 3600.0000 800.0000 3599.990
+ 58    0      0   26 2:2:2:0          yes 3600.0000 800.0000 3600.000
+ 59    1      1   27 71:71:71:1       yes 3600.0000 800.0000 3600.009
+ 60    0      0   28 9:9:9:0          yes 3600.0000 800.0000 3599.981
+ 61    1      1   29 66:66:66:1       yes 3600.0000 800.0000 3600.000
+ 62    0      0   30 3:3:3:0          yes 3600.0000 800.0000 3599.990
+ 63    1      1   31 72:72:72:1       yes 3600.0000 800.0000 3600.009
+
+
+
+=== lstopo  ===
+Machine (251GB total)
+  Package L#0
+    NUMANode L#0 (P#0 125GB)
+    L3 L#0 (45MB)
+      L2 L#0 (2048KB) + L1d L#0 (48KB) + L1i L#0 (32KB) + Core L#0
+        PU L#0 (P#0)
+        PU L#1 (P#52)
+      L2 L#1 (2048KB) + L1d L#1 (48KB) + L1i L#1 (32KB) + Core L#1
+        PU L#2 (P#2)
+        PU L#3 (P#34)
+      L2 L#2 (2048KB) + L1d L#2 (48KB) + L1i L#2 (32KB) + Core L#2
+        PU L#4 (P#4)
+        PU L#5 (P#36)
+      L2 L#3 (2048KB) + L1d L#3 (48KB) + L1i L#3 (32KB) + Core L#3
+        PU L#6 (P#6)
+        PU L#7 (P#38)
+      L2 L#4 (2048KB) + L1d L#4 (48KB) + L1i L#4 (32KB) + Core L#4
+        PU L#8 (P#8)
+        PU L#9 (P#40)
+      L2 L#5 (2048KB) + L1d L#5 (48KB) + L1i L#5 (32KB) + Core L#5
+        PU L#10 (P#10)
+        PU L#11 (P#42)
+      L2 L#6 (2048KB) + L1d L#6 (48KB) + L1i L#6 (32KB) + Core L#6
+        PU L#12 (P#12)
+        PU L#13 (P#44)
+      L2 L#7 (2048KB) + L1d L#7 (48KB) + L1i L#7 (32KB) + Core L#7
+        PU L#14 (P#14)
+        PU L#15 (P#46)
+      L2 L#8 (2048KB) + L1d L#8 (48KB) + L1i L#8 (32KB) + Core L#8
+        PU L#16 (P#16)
+        PU L#17 (P#48)
+      L2 L#9 (2048KB) + L1d L#9 (48KB) + L1i L#9 (32KB) + Core L#9
+        PU L#18 (P#18)
+        PU L#19 (P#50)
+      L2 L#10 (2048KB) + L1d L#10 (48KB) + L1i L#10 (32KB) + Core L#10
+        PU L#20 (P#20)
+        PU L#21 (P#32)
+      L2 L#11 (2048KB) + L1d L#11 (48KB) + L1i L#11 (32KB) + Core L#11
+        PU L#22 (P#22)
+        PU L#23 (P#54)
+      L2 L#12 (2048KB) + L1d L#12 (48KB) + L1i L#12 (32KB) + Core L#12
+        PU L#24 (P#24)
+        PU L#25 (P#56)
+      L2 L#13 (2048KB) + L1d L#13 (48KB) + L1i L#13 (32KB) + Core L#13
+        PU L#26 (P#26)
+        PU L#27 (P#58)
+      L2 L#14 (2048KB) + L1d L#14 (48KB) + L1i L#14 (32KB) + Core L#14
+        PU L#28 (P#28)
+        PU L#29 (P#60)
+      L2 L#15 (2048KB) + L1d L#15 (48KB) + L1i L#15 (32KB) + Core L#15
+        PU L#30 (P#30)
+        PU L#31 (P#62)
+    HostBridge
+      PCIBridge
+        PCI 01:00.0 (Ethernet)
+          Net "eno8303"
+        PCI 01:00.1 (Ethernet)
+          Net "eno8403"
+      PCIBridge
+        PCIBridge
+          PCI 03:00.0 (VGA)
+      PCI 00:18.0 (SATA)
+      PCI 00:19.0 (SATA)
+    HostBridge
+      PCIBridge
+        PCI 22:00.0 (Ethernet)
+          Net "eno12399np0"
+          OpenFabrics "mlx5_0"
+        PCI 22:00.1 (Ethernet)
+          Net "eno12409np1"
+          OpenFabrics "mlx5_1"
+    HostBridge
+      PCIBridge
+        PCI 4a:00.0 (RAID)
+          Block(Disk) "sda"
+  Package L#1
+    NUMANode L#1 (P#1 126GB)
+    L3 L#1 (45MB)
+      L2 L#16 (2048KB) + L1d L#16 (48KB) + L1i L#16 (32KB) + Core L#16
+        PU L#32 (P#1)
+        PU L#33 (P#33)
+      L2 L#17 (2048KB) + L1d L#17 (48KB) + L1i L#17 (32KB) + Core L#17
+        PU L#34 (P#3)
+        PU L#35 (P#35)
+      L2 L#18 (2048KB) + L1d L#18 (48KB) + L1i L#18 (32KB) + Core L#18
+        PU L#36 (P#5)
+        PU L#37 (P#37)
+      L2 L#19 (2048KB) + L1d L#19 (48KB) + L1i L#19 (32KB) + Core L#19
+        PU L#38 (P#7)
+        PU L#39 (P#39)
+      L2 L#20 (2048KB) + L1d L#20 (48KB) + L1i L#20 (32KB) + Core L#20
+        PU L#40 (P#9)
+        PU L#41 (P#41)
+      L2 L#21 (2048KB) + L1d L#21 (48KB) + L1i L#21 (32KB) + Core L#21
+        PU L#42 (P#11)
+        PU L#43 (P#43)
+      L2 L#22 (2048KB) + L1d L#22 (48KB) + L1i L#22 (32KB) + Core L#22
+        PU L#44 (P#13)
+        PU L#45 (P#45)
+      L2 L#23 (2048KB) + L1d L#23 (48KB) + L1i L#23 (32KB) + Core L#23
+        PU L#46 (P#15)
+        PU L#47 (P#47)
+      L2 L#24 (2048KB) + L1d L#24 (48KB) + L1i L#24 (32KB) + Core L#24
+        PU L#48 (P#17)
+        PU L#49 (P#49)
+      L2 L#25 (2048KB) + L1d L#25 (48KB) + L1i L#25 (32KB) + Core L#25
+        PU L#50 (P#19)
+        PU L#51 (P#51)
+      L2 L#26 (2048KB) + L1d L#26 (48KB) + L1i L#26 (32KB) + Core L#26
+        PU L#52 (P#21)
+        PU L#53 (P#53)
+      L2 L#27 (2048KB) + L1d L#27 (48KB) + L1i L#27 (32KB) + Core L#27
+        PU L#54 (P#23)
+        PU L#55 (P#55)
+      L2 L#28 (2048KB) + L1d L#28 (48KB) + L1i L#28 (32KB) + Core L#28
+        PU L#56 (P#25)
+        PU L#57 (P#57)
+      L2 L#29 (2048KB) + L1d L#29 (48KB) + L1i L#29 (32KB) + Core L#29
+        PU L#58 (P#27)
+        PU L#59 (P#59)
+      L2 L#30 (2048KB) + L1d L#30 (48KB) + L1i L#30 (32KB) + Core L#30
+        PU L#60 (P#29)
+        PU L#61 (P#61)
+      L2 L#31 (2048KB) + L1d L#31 (48KB) + L1i L#31 (32KB) + Core L#31
+        PU L#62 (P#31)
+        PU L#63 (P#63)
+    HostBridge
+      PCIBridge
+        PCI b5:00.0 (Ethernet)
+          Net "enp181s0f0np0"
+          OpenFabrics "mlx5_bond_0"
+        PCI b5:00.1 (Ethernet)
+          Net "enp181s0f1np1"
+
+
+
+=== numactl --hardware ===
+available: 2 nodes (0-1)
+node 0 cpus: 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62
+node 0 size: 128412 MB
+node 0 free: 82901 MB
+node 1 cpus: 1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55 57 59 61 63
+node 1 size: 129011 MB
+node 1 free: 124819 MB
+node distances:
+node   0   1 
+  0:  10  21 
+  1:  21  10 
+
+
+
+=== Git Commit Information ===
+commit da25306f7f28fafa4c43b2e96f05c974ebe3172d
+Author: Victor Baybekov <vbaybekov@gmail.com>
+Date:   Fri Feb 2 10:36:19 2024 +0100
+
+    It's complicated to run normal JDK open from sudo when sdk is installed for user
+    
+    need to test if I really need sudo for numactl
