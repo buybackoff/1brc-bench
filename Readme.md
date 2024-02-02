@@ -1,5 +1,7 @@
 # 1BRC reproducible benchmark
 
+> See [results branch](https://github.com/buybackoff/1brc-bench/tree/results) for the output.
+
 Works on Ubuntu 22.04, may work on Debian 12 with .NET install adjustments in prerequisites.sh (apt repo). 
 
 1. Clone this repo.
