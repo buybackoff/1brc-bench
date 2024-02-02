@@ -40,3 +40,6 @@
 [submodule "src/NimaAra"]
 	path = src/NimaAra
 	url = https://github.com/NimaAra/1brc
+[submodule "src/CameronAavik"]
+	path = src/CameronAavik
+	url = https://github.com/CameronAavik/1brc

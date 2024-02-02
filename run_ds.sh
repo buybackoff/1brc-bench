@@ -26,10 +26,16 @@ else
     min_cores=4
 fi
 
-if [[ $dataset != *"10K" ]]; then
-    user_list=("buybackoff" "noahfalk" "nietras" "xoofx" "kpocza" "austindonisan" "dzaima" "lehuyduc" "mtopolnik-rs" "abeobk" "artsiomkorzun" "jerrinot" "mtopolnik" "thomaswue" "royvanrijn" "pedrosakuma")
+if [ "$runs" -le 5 ]; then
+    # All that finish without issues
+    user_list=("buybackoff" "CameronAavik" "kpocza" "nietras" "NimaAra" "noahfalk" "pedrosakuma" "xoofx" "austindonisan" "dzaima" "lehuyduc" "mtopolnik-rs" "abeobk" "artsiomkorzun" "jerrinot" "mtopolnik" "serkan_ozal" "stephenvonworley" "thomaswue" "royvanrijn" )
 else
-    user_list=("buybackoff" "noahfalk" "nietras" "xoofx" "kpocza" "austindonisan" "dzaima" "lehuyduc" "mtopolnik-rs" "abeobk" "artsiomkorzun" "jerrinot" "mtopolnik" "thomaswue" "royvanrijn")
+    # Limit to 5 secs on original 6 cores
+    if [[ $dataset != *"10K" ]]; then
+        user_list=("buybackoff" "CameronAavik" "kpocza" "nietras" "noahfalk" "xoofx" "austindonisan" "dzaima" "lehuyduc" "mtopolnik-rs" "abeobk" "artsiomkorzun" "jerrinot" "mtopolnik" "serkan_ozal" "stephenvonworley" "thomaswue" "royvanrijn" )
+    else
+        user_list=("buybackoff" "nietras" "noahfalk" "xoofx" "austindonisan" "dzaima" "lehuyduc" "mtopolnik-rs" "abeobk" "artsiomkorzun" "jerrinot" "mtopolnik" "serkan_ozal" "stephenvonworley" "thomaswue" "royvanrijn" )
+    fi
 fi
 
 for username in "${user_list[@]}"; do
