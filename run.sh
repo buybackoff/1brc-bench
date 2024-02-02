@@ -96,7 +96,7 @@ else
     if [ -f "$aot" ]; then
         sudo numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "$aot $input_file"
     elif [ -f "$java" ]; then
-        (cd src/java && "./prepare_${username}.sh")
+        (cd src/java && "./prepare_${username}.sh" >/dev/null)
         (cd src/java && sudo numactl --all --physcpubind=$cpus hyperfine -w=$warmup -r=$runs --export-json $jsonfilename "./calculate_average_${username}.sh")
     else
         echo "No suitable file found for $username. Exiting."
